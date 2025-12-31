@@ -22,8 +22,17 @@ describe('.validateCurp', () => {
   });
 
   describe('support for special cases', () => {
-    it('return is valid for "foreign" state (NE)', () => {
+    it('return valid for "foreign" state (NE)', () => {
       const curp = 'MOTR930411HNERMN03';
+      const response = validateCurp(curp);
+      expect(response).toEqual({
+        curp,
+        isValid: true,
+      });
+    });
+
+    it('return valid for "foreign" CURPs with 17 characters', () => {
+      const curp = 'GOXE760210HNENXR09';
       const response = validateCurp(curp);
       expect(response).toEqual({
         curp,

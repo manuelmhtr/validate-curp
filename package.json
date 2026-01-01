@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A simple library to validate Mexican CURPs (Personal ID)",
   "main": "dist/index.js",
+  "types": "src/index.d.ts",
   "scripts": {
     "build": "./node_modules/rollup/dist/bin/rollup -c",
     "test": "jest"
